@@ -31,3 +31,7 @@
   loadFonts();
 </script>
 ```
+
+## Output- 
+
+![image](https://user-images.githubusercontent.com/63374020/154851121-c3155133-f7c3-4516-ae76-a3ff55ed6111.png)
