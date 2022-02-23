@@ -57,7 +57,7 @@
         phone_number = PhoneNumberField(widget=PhoneNumberPrefixWidget())
 ```
 
-**Note** - widgets require an addition dependency [`babel`](https://pypi.org/project/Babel/)
+**Note** - widgets require an addition dependency [`Babel`](https://pypi.org/project/Babel/)
 
 - Generated HTML
 
