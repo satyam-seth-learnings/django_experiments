@@ -3,7 +3,7 @@
 ## Writing your own context processors
 A context processor has a simple interface: It’s a Python function that takes one argument, an HttpRequest object, and returns a dictionary that gets added to the template context.
 
-For example, to add the DEFAULT_FROM_EMAIL setting to every context:
+For example, to add the *test_value* setting to every context:
 
 - app_name/context_processors.py
 
