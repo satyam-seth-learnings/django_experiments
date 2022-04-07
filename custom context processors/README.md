@@ -1,0 +1,1 @@
+[Reference Link](https://docs.djangoproject.com/en/4.0/ref/templates/api/#s-writing-your-own-context-processors)
