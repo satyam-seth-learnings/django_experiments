@@ -126,3 +126,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 DBBACKUP_STORAGE = "django.core.files.storage.FileSystemStorage"
 DBBACKUP_STORAGE_OPTIONS = {"location": BASE_DIR / "dbbackup"}
+DBBACKUP_HOSTNAME = "geek"
+DBBACKUP_TMP_FILE_MAX_SIZE = 10 * 1024 * 1024
+DBBACKUP_CLEANUP_KEEP = 3
