@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog",
     "dbbackup",
+    'django_apscheduler',
 ]
 
 MIDDLEWARE = [
