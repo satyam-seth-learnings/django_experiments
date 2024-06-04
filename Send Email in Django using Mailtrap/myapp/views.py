@@ -20,12 +20,24 @@ def send_test_email(self):
     from_email = "admin@example.com"
     to_email = ["user@example.com"]
 
-    # Create email with Plain Text Message
+    # # Create email with Plain Text Message
+    # email = EmailMessage(
+    #     subject=subject,
+    #     body=plain_message,
+    #     from_email=from_email,
+    #     to=to_email,
+    # )
+
+    # Create email with HTML Content
     email = EmailMessage(
-        subject=subject, body=plain_message, from_email=from_email, to=to_email
+        subject=subject,
+        body=html_message,
+        from_email=from_email,
+        to=to_email,
     )
+    email.content_subtype = "html"  # Set the email content type to HTML
 
     # Send the email
     email.send()
 
-    return HttpResponse("Test email with Plain Message sent successfully.")
+    return HttpResponse("Test email with HTML Content sent successfully.")
