@@ -46,9 +46,13 @@ def send_test_email(self):
     )
     email.attach_alternative(html_message, "text/html")
 
+    # Attach File to EMail
+    with open("myfile.pdf", "rb") as file:
+        email.attach("myfile.pdf", file.read(), "application/pdf")
+
     # Send the email
     email.send()
 
     return HttpResponse(
-        "Test email with Plain Message,  HTML Content and Attachment sent successfully."
+        "Test email with Plain Message, HTML Content and Attachment sent successfully."
     )
