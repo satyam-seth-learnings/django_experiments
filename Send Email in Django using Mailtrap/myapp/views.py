@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.core.mail import EmailMessage
+from django.core.mail import EmailMessage, EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.http import HttpResponse
@@ -28,16 +28,27 @@ def send_test_email(self):
     #     to=to_email,
     # )
 
-    # Create email with HTML Content
-    email = EmailMessage(
+    # # Create email with HTML Content
+    # email = EmailMessage(
+    #     subject=subject,
+    #     body=html_message,
+    #     from_email=from_email,
+    #     to=to_email,
+    # )
+    # email.content_subtype = "html"  # Set the email content type to HTML
+
+    # Create the email message with both plain text and HTML content
+    email = EmailMultiAlternatives(
         subject=subject,
-        body=html_message,
+        body=plain_message,
         from_email=from_email,
         to=to_email,
     )
-    email.content_subtype = "html"  # Set the email content type to HTML
+    email.attach_alternative(html_message, "text/html")
 
     # Send the email
     email.send()
 
-    return HttpResponse("Test email with HTML Content sent successfully.")
+    return HttpResponse(
+        "Test email with Plain Message,  HTML Content and Attachment sent successfully."
+    )
