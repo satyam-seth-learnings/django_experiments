@@ -9,4 +9,5 @@ urlpatterns = [
         views.send_prod_smtp_email,
         name="send_prod_smtp_email",
     ),
+    path("send-prod-api-email/", views.send_prod_api_email, name="send_prod_api_email"),
 ]

@@ -3,6 +3,9 @@ from django.core.mail import EmailMessage, EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.http import HttpResponse
+import mailtrap as mt
+import base64
+from decouple import config
 
 # Create your views here.
 
@@ -90,3 +93,35 @@ def send_prod_smtp_email(request):
     email.send()
 
     return HttpResponse("SMTP Email with HTML and attachment sent successfully.")
+
+
+def send_prod_api_email(request):  # For Production using API
+    subject = "Test API Email"
+    name = "User"
+    html_message = render_to_string("myapp/email_template.html", {"name": name})
+    plain_message = strip_tags(html_message)
+    from_email = "admin@demomailtrap.com"
+    to_email = "xyz@email.com"
+
+    # Attach File to EMail
+    with open("myfile.pdf", "rb") as file:
+        file_content = base64.b64encode(file.read())
+
+    myfile = mt.Attachment(
+        content=file_content, filename="myfile.pdf", mimetype="application/pdf"
+    )
+
+    mail = mt.Mail(
+        sender=mt.Address(email=from_email, name="Admin"),
+        to=[mt.Address(email=to_email, name=name)],
+        subject=subject,
+        text=plain_message,
+        html=html_message,
+        category="OTP Emails",
+        attachments=[myfile],
+    )
+
+    client = mt.MailtrapClient(token=config("MAILTRAP_API_TOKEN"))
+    client.send(mail)
+
+    return HttpResponse("API Email with HTML and attachment sent successfully.")
