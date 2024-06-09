@@ -6,4 +6,4 @@ from core.models import DemoModel
 
 @admin.register(DemoModel)
 class DemoAdmin(admin.ModelAdmin):
-    list_display = ("name", "address", "phone_number")
+    list_display = ("id", "name", "address", "phone_number")
