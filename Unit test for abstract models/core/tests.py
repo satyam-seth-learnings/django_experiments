@@ -52,7 +52,7 @@ class AbstractModelMixinTestCase(TransactionTestCase):
         connection.close()
 
 
-class TestBasePurchaseModel(AbstractModelMixinTestCase):
+class TestBaseCreatedModifiedModel(AbstractModelMixinTestCase):
     """Test Base created modified Model"""
 
     mixin = BaseCreatedModifiedModel
