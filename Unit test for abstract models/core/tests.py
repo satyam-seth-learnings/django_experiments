@@ -1,4 +1,11 @@
-from django.test import TestCase
+from datetime import timedelta
+
+from django.utils import timezone
+from typing import Optional, Type
+
+from django.db import connection, models
+from django.test import TransactionTestCase
+from core.models import BaseCreatedModifiedModel
 
 # Create your tests here.
 
@@ -43,3 +50,23 @@ class AbstractModelMixinTestCase(TransactionTestCase):
 
         # Close the connection
         connection.close()
+
+
+class TestBasePurchaseModel(AbstractModelMixinTestCase):
+    """Test Base created modified Model"""
+
+    mixin = BaseCreatedModifiedModel
+
+
+    def test_creation(self) -> None:
+        """Test creation of a model instance"""
+
+       # Get current datetime
+        now = timezone.now()
+        
+        # create model instance
+        obj = self.model.objects.create()
+
+        # Assert timestamps are close to the current time
+        self.assertAlmostEqual(obj.created_on, now, delta=timedelta(seconds=1))
+        self.assertAlmostEqual(obj.modified_on, now, delta=timedelta(seconds=1))
