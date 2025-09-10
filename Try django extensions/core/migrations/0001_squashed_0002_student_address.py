@@ -5,8 +5,6 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    replaces = [('core', '0001_initial'), ('core', '0002_student_address')]
-
     initial = True
 
     dependencies = [
