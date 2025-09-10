@@ -1,11 +1,23 @@
 - Try shell plus
 
 ```sh
-python manage.py shell_plus
+python3 manage.py shell_plus
 ```
 
 - Print SQL queries
 
 ```sh
-python manage.py shell_plus --print-sql
+python3 manage.py shell_plus --print-sql
+```
+
+- delete_squashed_migrations command
+
+```sh
+python3 manage.py delete_squashed_migrations core
+```
+
+- Export emails
+
+```sh
+python3 manage.py export_emails > data.txt
 ```
