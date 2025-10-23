@@ -1,5 +1,7 @@
 - [Offical Doc](https://django-parler.readthedocs.io/en/stable/)
 
+<img width="2239" height="803" alt="image" src="https://github.com/user-attachments/assets/253eb794-3669-4150-8cec-7360a44e771c" />
+
 # How to run the project
 
 - Create virtual environment
