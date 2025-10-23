@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "parler",
     "products",
 ]
 
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
 ]
 
 ROOT_URLCONF = "multilingual_project.urls"
@@ -111,6 +113,13 @@ USE_I18N = True
 
 USE_TZ = True
 
+LANGUAGES = [
+    ("en", "English"),
+    ("fr", "Français"),
+    ("it", "Italian"),
+    ("nl", "Dutch"),
+]
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
@@ -121,3 +130,18 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# parler
+# https://django-parler.readthedocs.io/en/stable/configuration.html#parler-languages
+PARLER_LANGUAGES = {
+    None: (
+        {"code": "en",},
+        {"code": "en-us",},
+        {"code": "it",},
+        {"code": "nl",},
+    ),
+    "default": {
+        "fallbacks": ["en"],          # defaults to PARLER_DEFAULT_LANGUAGE_CODE
+        "hide_untranslated": False,   # the default; let .active_translations() return fallbacks too.
+    }
+}
