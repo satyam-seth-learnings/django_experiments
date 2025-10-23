@@ -1,0 +1,252 @@
+[
+    {
+        "model": "products.producttranslation",
+        "pk": 1,
+        "fields": {
+            "language_code": "en",
+            "name": "Product 1",
+            "description": "This is the description for Product 1 in English.",
+            "master": 1
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 2,
+        "fields": {
+            "language_code": "fr",
+            "name": "Produit 1",
+            "description": "Ceci est la description du produit 1 en français.",
+            "master": 1
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 3,
+        "fields": {
+            "language_code": "it",
+            "name": "Prodotto 1",
+            "description": "Questa è la descrizione del prodotto 1 in italiano.",
+            "master": 1
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 4,
+        "fields": {
+            "language_code": "nl",
+            "name": "Product 1",
+            "description": "Dit is de beschrijving voor Product 1 in het Nederlands.",
+            "master": 1
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 5,
+        "fields": {
+            "language_code": "hi",
+            "name": "उत्पाद 1",
+            "description": "यह उत्पाद 1 का विवरण हिंदी में है।",
+            "master": 1
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 6,
+        "fields": {
+            "language_code": "en",
+            "name": "Product 2",
+            "description": "This is the description for Product 2 in English.",
+            "master": 2
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 7,
+        "fields": {
+            "language_code": "fr",
+            "name": "Produit 2",
+            "description": "Ceci est la description du produit 2 en français.",
+            "master": 2
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 8,
+        "fields": {
+            "language_code": "it",
+            "name": "Prodotto 2",
+            "description": "Questa è la descrizione del prodotto 2 in italiano.",
+            "master": 2
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 9,
+        "fields": {
+            "language_code": "nl",
+            "name": "Product 2",
+            "description": "Dit is de beschrijving voor Product 2 in het Nederlands.",
+            "master": 2
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 10,
+        "fields": {
+            "language_code": "hi",
+            "name": "उत्पाद 2",
+            "description": "यह उत्पाद 2 का विवरण हिंदी में है।",
+            "master": 2
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 11,
+        "fields": {
+            "language_code": "en",
+            "name": "Product 3",
+            "description": "This is the description for Product 3 in English.",
+            "master": 3
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 12,
+        "fields": {
+            "language_code": "fr",
+            "name": "Produit 3",
+            "description": "Ceci est la description du produit 3 en français.",
+            "master": 3
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 13,
+        "fields": {
+            "language_code": "it",
+            "name": "Prodotto 3",
+            "description": "Questa è la descrizione del prodotto 3 in italiano.",
+            "master": 3
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 14,
+        "fields": {
+            "language_code": "nl",
+            "name": "Product 3",
+            "description": "Dit is de beschrijving voor Product 3 in het Nederlands.",
+            "master": 3
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 15,
+        "fields": {
+            "language_code": "hi",
+            "name": "उत्पाद 3",
+            "description": "यह उत्पाद 3 का विवरण हिंदी में है।",
+            "master": 3
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 16,
+        "fields": {
+            "language_code": "en",
+            "name": "Product 4",
+            "description": "This is the description for Product 4 in English.",
+            "master": 4
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 17,
+        "fields": {
+            "language_code": "fr",
+            "name": "Produit 4",
+            "description": "Ceci est la description du produit 4 en français.",
+            "master": 4
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 18,
+        "fields": {
+            "language_code": "it",
+            "name": "Prodotto 4",
+            "description": "Questa è la descrizione del prodotto 4 in italiano.",
+            "master": 4
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 19,
+        "fields": {
+            "language_code": "nl",
+            "name": "Product 4",
+            "description": "Dit is de beschrijving voor Product 4 in het Nederlands.",
+            "master": 4
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 20,
+        "fields": {
+            "language_code": "hi",
+            "name": "उत्पाद 4",
+            "description": "यह उत्पाद 4 का विवरण हिंदी में है।",
+            "master": 4
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 21,
+        "fields": {
+            "language_code": "en",
+            "name": "Product 5",
+            "description": "This is the description for Product 5 in English.",
+            "master": 5
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 22,
+        "fields": {
+            "language_code": "fr",
+            "name": "Produit 5",
+            "description": "Ceci est la description du produit 5 en français.",
+            "master": 5
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 23,
+        "fields": {
+            "language_code": "it",
+            "name": "Prodotto 5",
+            "description": "Questa è la descrizione del prodotto 5 in italiano.",
+            "master": 5
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 24,
+        "fields": {
+            "language_code": "nl",
+            "name": "Product 5",
+            "description": "Dit is de beschrijving voor Product 5 in het Nederlands.",
+            "master": 5
+        }
+    },
+    {
+        "model": "products.producttranslation",
+        "pk": 25,
+        "fields": {
+            "language_code": "hi",
+            "name": "उत्पाद 5",
+            "description": "यह उत्पाद 5 का विवरण हिंदी में है।",
+            "master": 5
+        }
+    }
+]
