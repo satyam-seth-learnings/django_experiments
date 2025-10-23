@@ -49,7 +49,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "django.middleware.locale.LocaleMiddleware",
 ]
 
 ROOT_URLCONF = "multilingual_project.urls"
@@ -118,6 +117,7 @@ LANGUAGES = [
     ("fr", "Français"),
     ("it", "Italian"),
     ("nl", "Dutch"),
+    ("hi", "Hindi"),
 ]
 
 
@@ -136,9 +136,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 PARLER_LANGUAGES = {
     None: (
         {"code": "en",},
-        {"code": "en-us",},
+        {"code": "fr",},
         {"code": "it",},
         {"code": "nl",},
+        {"code": "hi",},
     ),
     "default": {
         "fallbacks": ["en"],          # defaults to PARLER_DEFAULT_LANGUAGE_CODE
