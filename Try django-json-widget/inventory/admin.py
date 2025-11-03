@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.db import models
+from django_json_widget.widgets import JSONEditorWidget
 from .models import Item, Product
 
 # Register your models here.
@@ -13,6 +15,9 @@ class ItemAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    """Admin interface for Product model. without use of django-json-widget."""
+    """Admin interface for Product model. with use of django-json-widget."""
 
     list_display = ("id", "name", "description", "price", "attributes")
+    formfield_overrides = {
+        models.JSONField: {"widget": JSONEditorWidget},
+    }
