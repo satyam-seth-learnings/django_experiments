@@ -1,0 +1,29 @@
+[
+  {
+    "model": "inventory.item",
+    "pk": 1,
+    "fields": {
+      "name": "Basic T-shirt",
+      "metadata": {
+        "color": "red",
+        "size": "M",
+        "material": "cotton",
+        "brand": "BrandX"
+      }
+    }
+  },
+  {
+    "model": "inventory.item",
+    "pk": 2,
+    "fields": {
+      "name": "Running Shoes",
+      "metadata": {
+        "color": "blue",
+        "size": "10",
+        "material": "leather",
+        "brand": "RunFast",
+        "weight": "350g"
+      }
+    }
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "model": "inventory.product",
+    "pk": 1,
+    "fields": {
+      "name": "Laptop",
+      "description": "High-performance laptop with Intel i7 processor.",
+      "price": "1299.99",
+      "attributes": {
+        "color": "silver",
+        "processor": "Intel i7",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    }
+  },
+  {
+    "model": "inventory.product",
+    "pk": 2,
+    "fields": {
+      "name": "Smartphone",
+      "description": "Sleek smartphone with a powerful camera.",
+      "price": "799.99",
+      "attributes": {
+        "color": "black",
+        "camera": "12MP",
+        "battery": "3500mAh",
+        "storage": "128GB"
+      }
+    }
+  }
+]
