@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Item
+from .models import Item, Product
 
 # Register your models here.
 
@@ -8,4 +8,11 @@ from .models import Item
 class ItemAdmin(admin.ModelAdmin):
     """Admin interface for Item model. without use of django-json-widget."""
 
-    list_display = ("name", "metadata")
+    list_display = ("id", "name", "metadata")
+
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    """Admin interface for Product model. without use of django-json-widget."""
+
+    list_display = ("id", "name", "description", "price", "attributes")
