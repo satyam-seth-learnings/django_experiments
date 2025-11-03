@@ -1,0 +1,34 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:16
+    container_name: jsondemo_db
+    environment:
+      POSTGRES_DB: jsondemo
+      POSTGRES_USER: django
+      POSTGRES_PASSWORD: django123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    container_name: jsondemo_web
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DB_NAME=jsondemo
+      - DB_USER=django
+      - DB_PASSWORD=django123
+      - DB_HOST=db
+      - DB_PORT=5432
+
+volumes:
+  postgres_data:
