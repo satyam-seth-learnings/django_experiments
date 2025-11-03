@@ -1,9 +1,7 @@
-version: '3.9'
-
 services:
   db:
     image: postgres:16
-    container_name: jsondemo_db
+    container_name: json_demo_db
     environment:
       POSTGRES_DB: jsondemo
       POSTGRES_USER: django
@@ -15,7 +13,7 @@ services:
 
   web:
     build: .
-    container_name: jsondemo_web
+    container_name: json_demo_backend
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/app
