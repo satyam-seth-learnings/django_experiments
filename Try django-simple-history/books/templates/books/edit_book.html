@@ -1,0 +1,11 @@
+<h1>Edit Book</h1>
+<form method="POST">
+    {% csrf_token %}
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" value="{{ book.title }}"><br><br>
+    <label for="author">Author:</label><br>
+    <input type="text" id="author" name="author" value="{{ book.author }}"><br><br>
+    <label for="published_date">Published Date:</label><br>
+    <input type="date" id="published_date" name="published_date" value="{{ book.published_date }}"><br><br>
+    <input type="submit" value="Save Changes">
+</form>
