@@ -30,3 +30,8 @@ def delete_book(request, pk):
     book = Book.objects.get(pk=pk)
     book.delete()
     return redirect('book_list')
+
+def book_history(request, pk):
+    book = Book.objects.get(pk=pk)
+    history = book.history.all()  # Retrieve the history records
+    return render(request, 'books/book_history.html', {'book': book, 'history': history})
